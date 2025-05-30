@@ -108,29 +108,39 @@ These tools integrate type checking with specific frameworks, providing tailored
 
 The diversity of tools reflects the dual nature of Python's type system—supporting both static and dynamic paradigms. As Rak-amnouykit et al. (2020) demonstrate, the adoption of type annotations is increasing, but real-world usage patterns remain heterogeneous, and the semantics of type checking tools can differ in subtle but important ways. Packages like `type_enforced` complement this landscape by providing runtime guarantees that static checkers cannot, especially in collaborative or data-driven research settings.
 
----
+--- 
+
 `TODO`
 - [ ] Figure out how to reference something in the paper.bib file
 - [ ] Do we need to have the project-based type checkers listed or marshmallo?
+
 ---
 
 Several Python libraries provide related functionality:
 
 ## Static Type Checkers
+
 - **MyPy** : A widely-used static type checker that analyzes type annotations to detect inconsistencies.
 - **PyType** : Developed by Google, it infers types and checks for type errors in Python code.
 
 ## Runtime Type Enforcement
-- **Pydantic** ([Samuel Colvin 2017](https://github.com/pydantic/pydantic)): Primarily focused on data validation using models rather than direct function annotation enforcement.
-- **Typeguard** ([Alex Grönholm 2016](https://github.com/agronholm/typeguard)): Offers runtime type checking but lacks built-in support for custom constraints or inheritance-aware validation.
-- **Enforce** ([Russell Keith-Magee 2016](https://github.com/Russell91/python-enforce)): Provides basic runtime enforcement but does not support advanced typing features such as deeply nested structures or constraint-based validations.
+
+- **Pydantic** ([Samuel Colvin 2017](https://github.com/pydantic/pydantic)): 
+  Primarily focused on data validation using models rather than direct function annotation enforcement.
+- **Typeguard** ([Alex Grönholm 2016](https://github.com/agronholm/typeguard)): 
+  Offers runtime type checking but lacks built-in support for custom constraints or inheritance-aware validation.
+- **Enforce** ([Russell Keith-Magee 2016](https://github.com/Russell91/python-enforce)): 
+  Provides basic runtime enforcement but does not support advanced typing features such as deeply nested structures or constraint-based validations.
 
 Compared to these tools, `type_enforced` uniquely combines comprehensive type annotation enforcement with powerful constraint validation capabilities and inheritance-aware checks.
 
 ---
+
 `TODO`
 - [ ] Can someone take a look at these and see if what Tim wrote makes sense?
 - [ ] Are there other better known examples of Python type checkers?
+
+---
 
 # Usage Example
 

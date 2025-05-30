@@ -88,6 +88,73 @@ The functionality provided by `type_enforced` is particularly beneficial in scie
 
 Python's ecosystem for type checking and data validation is rich and rapidly evolving, reflecting the growing need for both static and runtime type safety in scientific and production code. The landscape can be broadly divided into static type checkers, runtime type checkers, and project-based frameworks. Recent empirical studies, such as Rak-amnouykit et al. (2020), have analyzed the adoption and semantics of Python's type systems in real-world codebases, highlighting both the promise and the challenges of practical type enforcement.
 
+## Static Type Checkers
+
+Static type checkers analyze code before execution, using type hints to catch potential errors and improve code reliability without incurring runtime overhead.
+
+- **MyPy** ([Jukka Lehtosalo 2012](https://github.com/python/mypy)): 
+  Mypy is the most widely adopted static type checker for Python, implementing a conventional static type system based on PEP 484. It enforces fixed variable types and reports errors when type annotations are violated. As detailed by Rak-amnouykit et al. (2020), Mypy represents the canonical approach to static type checking in Python, and its semantics have become a baseline for evaluating new type inference tools.
+- **Pyright** : 
+  A fast type checker developed by Microsoft, offering real-time feedback in editors.
+- **PyType**: 
+  Developed by Google, PyType also provides static analysis and type inference for Python code, but with a distinct approach. Unlike Mypy, PyType maintains separate type environments for different branches in control flow and can infer more precise union types for variables that take on multiple types. The comparative study by Rak-amnouykit et al. (2020) shows that PyType and Mypy differ in their handling of type joins, attribute typing, and error reporting, reflecting broader trade-offs in static analysis for dynamic languages.
+
+## Runtime Type Checkers and Data Validation
+
+Runtime type checkers enforce type constraints as the program executes, which is particularly valuable when handling external data or integrating with user-facing APIs.
+
+- **Pydantic** ([Samuel Colvin 2017](https://github.com/pydantic/pydantic)): Pydantic is a widely used library for runtime data validation, leveraging type hints to enforce data schemas and automatically cast input values. It is central to frameworks like FastAPI and is particularly effective for validating input from untrusted sources.
+- **Typeguard** ([Alex Grönholm 2016](https://github.com/agronholm/typeguard)): Typeguard offers runtime enforcement of function type annotations, raising errors when arguments or return values violate declared types. It is lightweight and integrates easily into existing codebases.
+- **Enforce** ([Russell Keith-Magee 2016](https://github.com/Russell91/python-enforce)): Provides basic runtime enforcement but does not support advanced typing features such as deeply nested structures or constraint-based validations.
+- **Marshmallow**: ([ Steven Loria 2013](https://github.com/marshmallow-code)):Marshmallow provides serialization, deserialization, and validation of complex data structures, with support for custom validation logic. It is commonly used in web frameworks for API data validation.
+- **type_enforced**: In contrast to the above, `type_enforced` offers decorator-based runtime enforcement of Python type annotations, including support for nested structures, custom constraints, and inheritance-aware validation. Its focus is on minimal boilerplate and compatibility with modern Python typing constructs, making it suitable for research and collaborative environments where correctness and ease of use are paramount.
+
+## Project-Based Type Checkers
+
+These tools integrate type checking with specific frameworks, providing tailored solutions for popular Python ecosystems.
+
+- **django-stubs** and **typeddjango**: Extend static type checking to Django projects, enabling type-safe development in large web applications.
+- **flask-pydantic** and **flask-marshmallow**: Provide seamless integration of runtime validation into Flask applications, leveraging Pydantic and Marshmallow models, respectively.
+- **FastAPI**: Built on top of Pydantic, FastAPI uses type hints for both static analysis and runtime validation of HTTP request and response bodies, ensuring robust API contracts.
+
+## Discussion
+
+The diversity of tools reflects the dual nature of Python's type system—supporting both static and dynamic paradigms. As Rak-amnouykit et al. (2020) demonstrate, the adoption of type annotations is increasing, but real-world usage patterns remain heterogeneous, and the semantics of type checking tools can differ in subtle but important ways. Packages like `type_enforced` complement this landscape by providing runtime guarantees that static checkers cannot, especially in collaborative or data-driven research settings.
+
+--- 
+
+`TODO`
+- [ ] Figure out how to reference something in the paper.bib file
+- [ ] Do we need to have the project-based type checkers listed or marshmallo?
+
+---
+
+Several Python libraries provide related functionality:
+
+## Static Type Checkers
+
+- **MyPy** : A widely-used static type checker that analyzes type annotations to detect inconsistencies.
+- **PyType** : Developed by Google, it infers types and checks for type errors in Python code.
+
+## Runtime Type Enforcement
+
+- **Pydantic** ([Samuel Colvin 2017](https://github.com/pydantic/pydantic)): 
+  Primarily focused on data validation using models rather than direct function annotation enforcement.
+- **Typeguard** ([Alex Grönholm 2016](https://github.com/agronholm/typeguard)): 
+  Offers runtime type checking but lacks built-in support for custom constraints or inheritance-aware validation.
+- **Enforce** ([Russell Keith-Magee 2016](https://github.com/Russell91/python-enforce)): 
+  Provides basic runtime enforcement but does not support advanced typing features such as deeply nested structures or constraint-based validations.
+
+Compared to these tools, `type_enforced` uniquely combines comprehensive type annotation enforcement with powerful constraint validation capabilities and inheritance-aware checks.
+
+---
+
+`TODO`
+- [ ] Can someone take a look at these and see if what Tim wrote makes sense?
+- [ ] Are there other better known examples of Python type checkers?
+
+---
+
 
 # Summary
 
