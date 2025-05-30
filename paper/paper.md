@@ -171,12 +171,8 @@ Development of this software was supported by the MIT Center for Transportation 
 `TODO`
 
 - [ ] Do we want to say anything here? Really this is a Connor question
+- [ ] I cannot get the bibliography to load any more. Arg.
 
 ---
-
-# Acknowledgements
-
-We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
-Oh, and support from Kathryn Johnston during the genesis of this project.
 
 # References
