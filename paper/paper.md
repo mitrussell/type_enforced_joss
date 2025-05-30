@@ -40,6 +40,7 @@ bibliography: paper.bib
 - [X] Be stored in a repository that is browsable online without registration.
 - [ ] Have an issue tracker that is readable without registration.
 - [ ] Permit individuals to create issues/file tickets against your repository.
+
 ---
 
 # Summary
@@ -66,6 +67,27 @@ Key features provided by the package include:
   Validate instances against class hierarchies using the provided utility class (`WithSubclasses`).
 - **Flexible enable/disable mechanism**: 
   Enable or disable enforcement selectively at the function or class level to accommodate debugging versus production environments.
+
+---
+
+`TODO`
+- [ ] Check if what I wrote makes any sense
+
+---
+
+# Research Applications
+
+The functionality provided by `type_enforced` is particularly beneficial in scientific computing contexts where strict data validation is crucial. Potential research applications include:
+
+- Ensuring correctness of numerical simulations by enforcing precise data types.
+- Validating complex data pipelines in machine learning workflows.
+- Enhancing reproducibility in computational experiments by preventing subtle runtime type errors.
+- Improving the robustness of research software for transportation modeling and logistics optimization, particularly in collaborative environments where contributors have diverse levels of Python expertise. For example, type enforcement has proven valuable when domain experts develop models and their outputs are integrated through APIs for interactive applications, ensuring reliability and consistency across the workflow.
+
+# Related Work
+
+Python's ecosystem for type checking and data validation is rich and rapidly evolving, reflecting the growing need for both static and runtime type safety in scientific and production code. The landscape can be broadly divided into static type checkers, runtime type checkers, and project-based frameworks. Recent empirical studies, such as Rak-amnouykit et al. (2020), have analyzed the adoption and semantics of Python's type systems in real-world codebases, highlighting both the promise and the challenges of practical type enforcement.
+
 
 # Summary
 
