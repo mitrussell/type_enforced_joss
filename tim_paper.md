@@ -174,8 +174,13 @@ positive_number(-5)   # Raises TypeError due to constraint violation
 # Acknowledgements
 
 Development of this software was supported by the MIT Center for Transportation \& Logistics (CTL).
+
 ---
+
 `TODO`
+
 - [ ] Do we want to say anything here? Really this is a Connor question
+
+---
 
 # References

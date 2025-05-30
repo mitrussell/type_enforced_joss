@@ -133,7 +133,7 @@ Several Python libraries provide related functionality:
 
 ## Static Type Checkers
 
-- **MyPy** : A widely-used static type checker that analyzes type annotations to detect inconsistencies.
+- **Mypy** : A widely-used static type checker that analyzes type annotations to detect inconsistencies.
 - **PyType** : Developed by Google, it infers types and checks for type errors in Python code.
 
 ## Runtime Type Enforcement
@@ -150,10 +150,55 @@ Compared to these tools, `type_enforced` uniquely combines comprehensive type an
 ---
 
 `TODO`
+
 - [ ] Can someone take a look at these and see if what Tim wrote makes sense?
 - [ ] Are there other better known examples of Python type checkers?
 
 ---
+
+# Usage Example
+
+A simple example demonstrating basic usage:
+
+```python
+import type_enforced
+
+@type_enforced.Enforcer()
+def calculate_area(width: float, height: float) -> float:
+    return width * height
+
+calculate_area(3.0, 4.5)   # Passes
+calculate_area('3', 4.5)   # Raises TypeError at runtime
+```
+
+An example demonstrating constraint validation:
+
+```python
+from type_enforced import Enforcer
+from type_enforced.utils import Constraint
+
+@Enforcer()
+def positive_number(value: [int, Constraint(ge=0)]) -> int:
+    return value
+
+positive_number(10)   # Passes
+positive_number(-5)   # Raises TypeError due to constraint violation
+```
+
+# Acknowledgements
+
+Development of this software was supported by the MIT Center for Transportation \& Logistics (CTL).
+
+---
+
+`TODO`
+
+- [ ] Do we want to say anything here? Really this is a Connor question
+
+---
+
+# References
+
 
 
 # Summary
