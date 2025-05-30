@@ -10,13 +10,14 @@ tags:
 authors:
   - name: Connor Makowski
     orcid: 0009-0005-1522-022X
-    corresponding: true # (This is the corresponding author)
-    affiliation: 1
-  - name: Timothy Russell
-    orcid: 0000-0001-8399-9339
+    corresponding: true 
+    # (This is the corresponding author)
     affiliation: 1
   - name: Willem Guter
     orcid: 0009-0002-1638-4726
+    affiliation: 1
+  - name: Timothy Russell
+    orcid: 0000-0001-8399-9339
     affiliation: 1
 affiliations:
   - index: 1
