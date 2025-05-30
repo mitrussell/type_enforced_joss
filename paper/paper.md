@@ -53,11 +53,17 @@ The `type_enforced` package addresses these limitations by providing robust runt
 # Functionality and Features
 
 Key features provided by the package include:
-- **Decorator-based enforcement**: Easily apply enforcement to functions, methods, classes, static methods, class methods, and dataclasses.
-- **Comprehensive typing support**: Supports built-in Python types (`int`, `str`, `list`, `dict`, etc.), typing module constructs (`List`, `Dict`, `Union`, `Optional`, `Literal`), union types (`int | float`), nested structures (`dict[dict[int]]`), and deeply nested iterables (`list[set[str]]`).
-- **Custom constraints**: Validate input values with built-in constraint classes (e.g., numerical bounds) or user-defined generic constraints (e.g., membership in a predefined set).
-- **Inheritance-aware validation**: Validate instances against class hierarchies using the provided utility class (`WithSubclasses`).
-- **Flexible enable/disable mechanism**: Enable or disable enforcement selectively at the function or class level to accommodate debugging versus production environments.
+
+- **Decorator-based enforcement**: 
+  Easily apply enforcement to functions, methods, classes, static methods, class methods, and dataclasses.
+- **Comprehensive typing support**: 
+  Supports built-in Python types (`int`, `str`, `list`, `dict`, etc.), typing module constructs (`List`, `Dict`, `Union`, `Optional`, `Literal`), union types (`int | float`), nested structures (`dict[dict[int]]`), and deeply nested iterables (`list[set[str]]`).
+- **Custom constraints**: 
+  Validate input values with built-in constraint classes (e.g., numerical bounds) or user-defined generic constraints (e.g., membership in a predefined set).
+- **Inheritance-aware validation**: 
+  Validate instances against class hierarchies using the provided utility class (`WithSubclasses`).
+- **Flexible enable/disable mechanism**: 
+  Enable or disable enforcement selectively at the function or class level to accommodate debugging versus production environments.
 
 # Summary
 
