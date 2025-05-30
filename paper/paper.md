@@ -23,7 +23,8 @@ affiliations:
     name: Massachusetts Institute of Technology Cambridge, United States
     ror: 042nb2s44
 date: 30 May 2025
-bibliography: paper.bib
+bibliography: paper/paper.bib
+
 ---
 `TODO`
 - [T] Check your name
