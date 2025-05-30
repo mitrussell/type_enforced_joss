@@ -28,12 +28,14 @@ bibliography: paper.bib
 ---
 
 `TODO`
+
 - [T] Check your name
 - [ ] Who else are we going to include on this?
 - [ ] I read this as Connor needs to be the corresponding author
 - [T] Check the list of tags
 
 **JOSS Software Requirements** 
+
 - [X] Be stored in a repository that can be cloned without registration.
 - [X] Be stored in a repository that is browsable online without registration.
 - [ ] Have an issue tracker that is readable without registration.
