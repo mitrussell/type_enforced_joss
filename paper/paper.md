@@ -1,20 +1,29 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'Type Enforced: A Python type enforcer for type annotations'
 tags:
   - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - type
+  - typing
+  - typeguard
+  - enforce
+  - pydantic
 authors:
-  - name: Adrian M. Price-Whelan
-    orcid: 0000-0003-0872-7098
+  - name: Connor Makowski
+    orcid: 0009-0005-1522-022X
+    corresponding: true # (This is the corresponding author)
+    affiliation: 1
+  - name: Timothy Russell
+    orcid: 0000-0001-8399-9339
+    affiliation: 1
+  - name: Willem Guter
+    orcid: 0009-0002-1638-4726
     affiliation: 1
 affiliations:
- - name: Lyman Spitzer, Jr. Fellow, Princeton University
-   index: 1
-date: 13 August 2017
-bibliography: paper.bib
+  - index: 1
+    name: Massachusetts Institute of Technology Cambridge, United States
+    ror: 042nb2s44
+date: 30 May 2025
+bibliography: paper/paper.bib
 ---
 
 # Summary
