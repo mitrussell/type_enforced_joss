@@ -10,6 +10,7 @@ tags:
 authors:
   - name: Connor Makowski
     orcid: 0009-0005-1522-022X
+    corresponding: true # (This is the corresponding author)
     affiliation: 1
   - name: Timothy Russell
     orcid: 0000-0001-8399-9339
@@ -25,9 +26,17 @@ date: 30 May 2025
 bibliography: paper.bib
 ---
 `TODO`
-- [ ] Check your name
+- [T] Check your name
 - [ ] Who else are we going to include on this?
-- [ ] Check the list of tags
+- [ ] I read this as Connor needs to be the corresponding author
+- [T] Check the list of tags
+
+**JOSS Software Requirements** 
+- [X] Be stored in a repository that can be cloned without registration.
+- [X] Be stored in a repository that is browsable online without registration.
+- [ ] Have an issue tracker that is readable without registration.
+- [ ] Permit individuals to create issues/file tickets against your repository.
+---
 
 # Summary
 
