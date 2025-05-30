@@ -92,7 +92,7 @@ Python's ecosystem for type checking and data validation is rich and rapidly evo
 
 Static type checkers analyze code before execution, using type hints to catch potential errors and improve code reliability without incurring runtime overhead.
 
-- **MyPy** ([Jukka Lehtosalo 2012](https://github.com/python/mypy)): 
+- **Mypy** ([Jukka Lehtosalo 2012](https://github.com/python/mypy)): 
   Mypy is the most widely adopted static type checker for Python, implementing a conventional static type system based on PEP 484. It enforces fixed variable types and reports errors when type annotations are violated. As detailed by Rak-amnouykit et al. (2020), Mypy represents the canonical approach to static type checking in Python, and its semantics have become a baseline for evaluating new type inference tools.
 - **Pyright** : 
   A fast type checker developed by Microsoft, offering real-time feedback in editors.
@@ -119,38 +119,15 @@ These tools integrate type checking with specific frameworks, providing tailored
 
 ## Discussion
 
-The diversity of tools reflects the dual nature of Python's type system—supporting both static and dynamic paradigms. As Rak-amnouykit et al. (2020) demonstrate, the adoption of type annotations is increasing, but real-world usage patterns remain heterogeneous, and the semantics of type checking tools can differ in subtle but important ways. Packages like `type_enforced` complement this landscape by providing runtime guarantees that static checkers cannot, especially in collaborative or data-driven research settings.
+The diversity of tools reflects the dual nature of Python's type system—supporting both static and dynamic paradigms. As Rak-amnouykit et al. (2020) demonstrate, the adoption of type annotations is increasing, but real-world usage patterns remain heterogeneous, and the semantics of type checking tools can differ in subtle but important ways. Packages like `type_enforced` complement this landscape by providing runtime guarantees that static checkers cannot, especially in collaborative or data-driven research settings. Compared to these tools, `type_enforced` uniquely combines comprehensive type annotation enforcement with powerful constraint validation capabilities and inheritance-aware checks.
 
 --- 
 
 `TODO`
+
 - [ ] Figure out how to reference something in the paper.bib file
 - [ ] Do we need to have the project-based type checkers listed or marshmallo?
-
----
-
-Several Python libraries provide related functionality:
-
-## Static Type Checkers
-
-- **Mypy** : A widely-used static type checker that analyzes type annotations to detect inconsistencies.
-- **PyType** : Developed by Google, it infers types and checks for type errors in Python code.
-
-## Runtime Type Enforcement
-
-- **Pydantic** ([Samuel Colvin 2017](https://github.com/pydantic/pydantic)): 
-  Primarily focused on data validation using models rather than direct function annotation enforcement.
-- **Typeguard** ([Alex Grönholm 2016](https://github.com/agronholm/typeguard)): 
-  Offers runtime type checking but lacks built-in support for custom constraints or inheritance-aware validation.
-- **Enforce** ([Russell Keith-Magee 2016](https://github.com/Russell91/python-enforce)): 
-  Provides basic runtime enforcement but does not support advanced typing features such as deeply nested structures or constraint-based validations.
-
-Compared to these tools, `type_enforced` uniquely combines comprehensive type annotation enforcement with powerful constraint validation capabilities and inheritance-aware checks.
-
----
-
-`TODO`
-
+- [ ] Should I get rid of the last sentence?
 - [ ] Can someone take a look at these and see if what Tim wrote makes sense?
 - [ ] Are there other better known examples of Python type checkers?
 
@@ -196,47 +173,5 @@ Development of this software was supported by the MIT Center for Transportation 
 - [ ] Do we want to say anything here? Really this is a Connor question
 
 ---
-
-# References
-
-
-
-# Summary
-
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
-
-``Gala`` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for ``Gala`` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. ``Gala`` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the ``Astropy`` package [@astropy] (``astropy.units`` and
-``astropy.coordinates``).
-
-``Gala`` was designed to be used by both astronomical researchers and by
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Pearson:2017] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Binney:2008]. The combination of speed,
-design, and support for Astropy functionality in ``Gala`` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission
-[@gaia] by students and experts alike. The source code for ``Gala`` has been
-archived to Zenodo with the linked DOI: [@zenodo]
-
-# Acknowledgements
-
-We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
-Oh, and support from Kathryn Johnston during the genesis of this project.
 
 # References
